@@ -13,7 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'bootstrap-sass'
-# gem 'gioco'
+gem 'gioco'
 
 group :development, :test do
   gem 'byebug'

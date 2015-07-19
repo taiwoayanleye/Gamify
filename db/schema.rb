@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150719212718) do
+ActiveRecord::Schema.define(version: 20150719215702) do
+
+  create_table "kinds", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "levels", force: :cascade do |t|
+    t.integer  "badge_id"
+    t.integer  "_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "points", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "kind_id"
+    t.integer  "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
